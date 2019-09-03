@@ -4,7 +4,7 @@ These are code snippets and other files from the two projects I worked on throug
 
 ### First Project: Synthetic Population Generation
 
-In this project, I developed a creative and efficient pipeline in Python and SQL to transform raw [American Community Survey Data] (https://www.census.gov/programs-surveys/acs/data.html) into a newer version of RTI's [Synthetic Population] (https://www.rti.org/impact/rti-us-synthetic-household-population™
+In this project, I developed a creative and efficient pipeline in Python and SQL to transform raw [American Community Survey Data](https://www.census.gov/programs-surveys/acs/data.html) into a newer version of RTI's [Synthetic Population](https://www.rti.org/impact/rti-us-synthetic-household-population™
 ). Essentially, there are scripts the load the tables into the appropriate format into a Postgres database, and then scripts that dynamically generate populations based on a set of variables that is requested.
 
 Previously, the 2010 and 2013 populations were generated through much more tedious methods, and often used too few households to represent the whole population. Through my pipeline, RTI should be able to generate new Synthetic Populations significantly quicker (starting with 2017) while also improving the diversity and accuracy of the populations. This allows for interesting applications for government researchers such as modeling the spread of disease over time, simulating geographical student debt over time, and targeting at-risk locations for the opioid crisis.
