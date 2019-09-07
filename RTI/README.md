@@ -15,4 +15,14 @@ Previously, the 2010 and 2013 populations were generated through much more tedio
 
 `Syn_Pop_Preview.png` is a preview of what the final synthetic population looks like. There is location data down to the block group level, data for four variables (`age, race, size, income`) and a serial number that joins each household to a PUMS record, which is an individual-level data point that is a 5% sample of the US population.  
 
+### Second Project: Evaluating Complexity of Neural Networks with Binary Response
 
+In this project, I assisted RTI Fellow Dr. Georgiy Bobashev on research to find a reliable way to quantify the complexity of Neural Networks. The method proposed uses Generalized Degrees of Freedom, a concept outlined by Ye in [this paper](https://doi.org/10.1080/01621459.1998.10474094). I wrote R scripts that implemented the perturbation algorithms specified in the paper, but for a binary response.
+
+In `single_pt_perturbation_nnet.R`, I use simulated data withg a small `n`. I then write a function that perturbs the binary response in each point and runs a neural net for each perturbation. Summing up the omega values for each run calculates the GDF of the model.
+
+In `multiple_pt_perturbation_nnet.R`, I the same simulated data with a larger `n`. I then write a function that perturbs the binary response of a randomly selected set of multiple points (partitions) and runs a neural net for each perturbation. Summing up the omega values for each perturbation calculates the GDF of the model.
+
+In `GDF_health.R`, I implement the multiple point perturbation method on a dataset where the predictors are binary variables and the response is a binary variable on whether someone is readmitted to a hospital. 
+
+At the end of each of these files, graphs are generated showing the variation in GDF based on the number of hidden nodes and the maximum amount of iterations on each neural net run. Plots are stored in the `plots` folder in the same directory.
