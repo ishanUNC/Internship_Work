@@ -26,3 +26,7 @@ In `multiple_pt_perturbation_nnet.R`, I the same simulated data with a larger `n
 In `GDF_health.R`, I implement the multiple point perturbation method on a dataset where the predictors are binary variables and the response is a binary variable on whether someone is readmitted to a hospital. 
 
 At the end of each of these files, graphs are generated showing the variation in GDF based on the number of hidden nodes and the maximum amount of iterations on each neural net run. Plots are stored in the `plots` folder in the same directory.
+
+For example, in `plot5.png`, we can see that GDF increases steadily as the number of hidden nodes increase but then plateaus at a certain point when N = 200.
+
+Dr. Bobashev hopes to put conclusions from my scripts on an upcoming research paper. 
